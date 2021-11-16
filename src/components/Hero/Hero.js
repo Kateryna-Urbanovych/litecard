@@ -6,9 +6,9 @@ export const Hero = () => {
   return (
     <section className={s.hero}>
       <h1 className={s.heroTitle}>
-        EASILY CONVERT CRYPTO <br /> TO GIFT CARDS
+        Easily convert crypto <br /> to gift cards
       </h1>
-      <HeroIcon width='237.67' height='237.67' className={s.heroIcon} />
+      <HeroIcon width='378' height='378' className={s.heroIcon} />
       <a href='#mailingListForm' className={s.signUp}>
         Sign Up
       </a>

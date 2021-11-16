@@ -5,14 +5,27 @@
 
   display: flex;
   flex-wrap: wrap;
-  //   margin: -5px;
+  justify-content: space-between;
 }
 
 .giftCardsItem {
   width: calc((100%) / 3);
-  //   margin: 5px;
+  margin: 0 0 50px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  .giftCardsThumb {
+    position: relative;
+    overflow: hidden;
+    height: 180px;
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+  }
 }

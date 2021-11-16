@@ -1,8 +1,8 @@
 .hero {
   background-color: #00aeef;
   text-align: center;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .heroTitle {
@@ -10,29 +10,32 @@
   padding: 0;
   color: #ffffff;
 
-  font-family: poppins-semibold, poppins, sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
   font-size: 50px;
-  line-height: normal;
+  line-height: 1.5;
   letter-spacing: normal;
   text-transform: uppercase;
 }
 
 .heroIcon {
-  // наугад
-  margin: -30px;
+  margin: -90px;
 }
 
 .signUp {
   cursor: pointer;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 30px;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
   font-size: 16px;
-  line-height: 1.4em;
+  line-height: 1.5;
 
   width: 142px;
   height: 46px;
@@ -40,6 +43,9 @@
   text-decoration: none;
   border: 2px solid #ffffff;
   border-radius: 30px;
+  background-color: #00aeef;
+  transition: background-color 250ms linear, color 250ms linear,
+    border-color 250ms linear;
 }
 
 .signUp:hover,
