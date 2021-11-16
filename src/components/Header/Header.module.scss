@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: relative;
+  min-height: 100px;
+  background-color: rgb(255, 255, 255);
+
+  padding-left: 30px;
+  padding-right: 30px;
+
+  @media screen and (min-width: 750px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media screen and (min-width: 1001px) {
+    padding-left: 102px;
+    padding-right: 102px;
+  }
+}
+
+.buttonMenu {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}

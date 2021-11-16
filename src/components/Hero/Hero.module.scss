@@ -1,0 +1,50 @@
+.hero {
+  background-color: #00aeef;
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.heroTitle {
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+
+  font-family: poppins-semibold, poppins, sans-serif;
+  font-size: 50px;
+  line-height: normal;
+  letter-spacing: normal;
+  text-transform: uppercase;
+}
+
+.heroIcon {
+  // наугад
+  margin: -30px;
+}
+
+.signUp {
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 16px;
+  line-height: 1.4em;
+
+  width: 142px;
+  height: 46px;
+  color: #ffffff;
+  text-decoration: none;
+  border: 2px solid #ffffff;
+  border-radius: 30px;
+}
+
+.signUp:hover,
+.signUp:focus {
+  background-color: #000000;
+  color: #ffffff;
+  border-color: #000000;
+}

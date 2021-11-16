@@ -1,0 +1,18 @@
+.giftCardsList {
+  list-style: none;
+  padding: 20px 0;
+  margin: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  //   margin: -5px;
+}
+
+.giftCardsItem {
+  width: calc((100%) / 3);
+  //   margin: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

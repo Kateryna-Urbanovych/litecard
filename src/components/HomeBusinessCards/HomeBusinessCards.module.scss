@@ -1,0 +1,49 @@
+.homeBusinessCards {
+  display: flex;
+  flex-direction: row;
+  padding: 20px 0;
+
+  color: #00aeef;
+  font-family: poppins-semibold, poppins, sans-serif;
+  font-size: 40px;
+  //   наугад
+  font-weight: 600;
+  text-align: center;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.homeBusinessList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+
+  li {
+    width: calc((100%) / 3);
+    text-align: center;
+  }
+}
+
+.homeBusinessItem {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.giftCardsIcon {
+  display: block;
+  //   наугад
+  margin: 20px auto;
+}
+
+.arrowForwardIcon {
+  transform: rotate(90deg);
+  padding-bottom: 80px;
+}
+
+.arrowBackIcon {
+  transform: rotate(-90deg);
+  padding-bottom: 80px;
+}
