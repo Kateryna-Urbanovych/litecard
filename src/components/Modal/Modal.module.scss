@@ -7,21 +7,23 @@
   text-align: right;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 100;
+
+  opacity: 0;
+  transition: 500ms;
 }
 
 .modal {
-  padding: 30px;
   position: fixed;
   top: 0;
   right: 0;
+  padding: 30px;
   height: 100%;
   width: 300px;
   background-color: #ffffff;
   z-index: 200;
-}
 
-.modal.isOpen {
-  margin-right: 0;
+  transform: translateX(100%);
+  transition: 500ms;
 }
 
 .textModal {

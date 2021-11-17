@@ -1,15 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import s from "./Header.module.scss";
 import { ReactComponent as LogoIcon } from "../../images/logo-icon.svg";
 import { ReactComponent as MenuIcon } from "../../images/menu-icon.svg";
 import { Modal } from "../../components/Modal/Modal";
 
 export const Header = () => {
-  const [showModal, setShowModal] = useState(false);
-
   const toggleModal = () => {
-    setShowModal((state) => !state);
     document.body.classList.toggle("modalOpen");
+
+    if (document.body.classList.contains("modalOpen")) {
+      document.querySelector("#modal").style.transform = "translateX(0%)";
+      document.querySelector("#overlay").style.opacity = "1";
+    } else {
+      document.querySelector("#modal").style.transform = "translateX(100%)";
+      document.querySelector("#overlay").style.opacity = "0";
+    }
   };
 
   return (
@@ -20,7 +25,7 @@ export const Header = () => {
       <button className={s.buttonMenu}>
         <MenuIcon width='50' height='50' fill='#00AEEF' onClick={toggleModal} />
       </button>
-      {showModal && <Modal onClose={toggleModal} />}
+      <Modal onClose={toggleModal} />
     </header>
   );
 };

@@ -27,7 +27,7 @@ export const Modal = ({ onClose }) => {
   };
 
   return createPortal(
-    <div className={s.overlay} onClick={handleOverlayClick}>
+    <div className={s.overlay} id='overlay' onClick={handleOverlayClick}>
       <div className={s.modal} id='modal'>
         <CloseBtnIcon
           width='20'
