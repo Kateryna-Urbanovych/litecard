@@ -4,7 +4,7 @@
   margin: 60px auto;
   padding: 20px;
   width: 350px;
-  height: 160px;
+  height: 170px;
 
   font-size: 20px;
   font-weight: 600;
@@ -15,7 +15,7 @@
   @media screen and (min-width: 750px) {
     padding: 25px;
     width: 450px;
-    height: 180px;
+    height: 190px;
     font-size: 25px;
   }
 
@@ -35,7 +35,7 @@
     outline: none;
   }
 
-  .inputForm:focus:invalid {
+  .inputForm.invalid {
     border: 2px solid red;
   }
 
@@ -53,8 +53,20 @@
     transition: background-color 250ms linear;
   }
 
-  button:hover,
-  button:focus {
+  button:hover {
     background-color: #000000;
+  }
+
+  .submited {
+    padding-top: 15px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.3;
+    font-weight: 300;
+    color: #000000;
+
+    @media screen and (min-width: 750px) {
+      font-size: 13px;
+    }
   }
 }

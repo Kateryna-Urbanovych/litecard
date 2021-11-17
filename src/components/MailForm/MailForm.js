@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import s from "./MailForm.module.scss";
 
 export const MailForm = () => {
-  const [value, setValue] = useState(null);
+  const [value, setValue] = useState("");
+  const [isSubmited, setIsSubmited] = useState(false);
 
   const handleChange = (e) => {
     setValue(e.target.value);
@@ -10,7 +11,23 @@ export const MailForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Submit!");
+
+    setIsSubmited(true);
+    setValue("");
+
+    setTimeout(() => {
+      setIsSubmited(false);
+    }, 5000);
+  };
+
+  const handleValidate = () => {
+    if (value === "" || !value.includes("@")) {
+      document.querySelector("#inputMailForm").style.borderColor = "#ff0000";
+      document.querySelector("#inputMailForm").style.borderWidth = "2px";
+    } else {
+      document.querySelector("#inputMailForm").style.borderColor = "#000000";
+      document.querySelector("#inputMailForm").style.borderWidth = "1px";
+    }
   };
 
   return (
@@ -29,7 +46,10 @@ export const MailForm = () => {
         placeholder='Enter your email here'
         required
       />
-      <button type='submit'>Submit</button>
+      <button type='submit' onClick={handleValidate}>
+        Submit
+      </button>
+      {isSubmited && <span className={s.submited}>Thanks for submitting!</span>}
     </form>
   );
 };
