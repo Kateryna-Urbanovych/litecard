@@ -14,7 +14,11 @@ export const MailForm = () => {
   };
 
   return (
-    <form className={s.mailingListForm} onSubmit={handleSubmit}>
+    <form
+      className={s.mailingListForm}
+      id='mailingListForm'
+      onSubmit={handleSubmit}
+    >
       <b>Subscribe to Our Mailing List</b>
       <input
         id='inputMailForm'
