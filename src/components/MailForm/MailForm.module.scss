@@ -1,0 +1,60 @@
+.mailingListForm {
+  display: flex;
+  flex-direction: column;
+  margin: 60px auto;
+  padding: 20px;
+  width: 350px;
+  height: 160px;
+
+  font-size: 20px;
+  font-weight: 600;
+  text-align: left;
+  color: #292929;
+  background-color: #ffffff;
+
+  @media screen and (min-width: 750px) {
+    padding: 25px;
+    width: 450px;
+    height: 180px;
+    font-size: 25px;
+  }
+
+  @media screen and (min-width: 1000px) {
+    padding: 30px;
+    width: 550px;
+    height: 200px;
+    font-size: 30px;
+  }
+
+  .inputForm {
+    margin-top: 30px;
+    padding: 15px 20px;
+    font-style: italic;
+    font-size: 14px;
+    border: 1px solid #000000;
+    outline: none;
+  }
+
+  .inputForm:focus:invalid {
+    border: 2px solid red;
+  }
+
+  button {
+    padding: 10px 15px;
+    font-style: italic;
+    font-size: 14px;
+    line-height: 1.3;
+    text-align: center;
+    cursor: pointer;
+
+    color: #ffffff;
+    background-color: #00aeef;
+    border: 2px solid #000000;
+    transition: background-color 250ms linear;
+  }
+
+  button:hover,
+  button:focus {
+    background-color: #000000;
+  }
+}

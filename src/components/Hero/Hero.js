@@ -8,7 +8,7 @@ export const Hero = () => {
       <h1 className={s.heroTitle}>
         Easily convert crypto <br /> to gift cards
       </h1>
-      <HeroIcon width='378' height='378' className={s.heroIcon} />
+      <HeroIcon className={s.heroIcon} />
       <a href='#mailingListForm' className={s.signUp}>
         Sign Up
       </a>

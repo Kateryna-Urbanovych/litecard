@@ -5,7 +5,7 @@ import { HomeBusinessCards } from "./components/HomeBusinessCards/HomeBusinessCa
 import { GiftCards } from "./components/GiftCards/GiftCards";
 import { ProfitSteps } from "./components/ProfitSteps/ProfitSteps";
 import { PoweredBy } from "./components/PoweredBy/PoweredBy";
-import { MailingListForm } from "./components/MailingListForm/MailingListForm";
+import { MailingList } from "./components/MailingList/MailingList";
 import { Footer } from "./components/Footer/Footer";
 
 export const App = () => {
@@ -17,7 +17,7 @@ export const App = () => {
       <GiftCards />
       <ProfitSteps />
       <PoweredBy />
-      <MailingListForm />
+      <MailingList />
       <Footer />
     </>
   );

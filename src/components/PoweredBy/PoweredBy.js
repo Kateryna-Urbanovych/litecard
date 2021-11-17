@@ -17,7 +17,7 @@ export const PoweredBy = () => {
             width='442'
             height='66'
             alt='Coingrate'
-            src='https://static.wixstatic.com/media/3629b4_943439d1244a43c7a2bbe5158070845b~mv2.png/v1/fill/w_442,h_66,al_c,q_85,usm_0.66_1.00_0.01/3629b4_943439d1244a43c7a2bbe5158070845b~mv2.webp'
+            src='https://static.wixstatic.com/media/3629b4_943439d1244a43c7a2bbe5158070845b~mv2.png/v1/fill/w_336,h_50,al_c,q_85,usm_0.66_1.00_0.01/3629b4_943439d1244a43c7a2bbe5158070845b~mv2.webp'
           />
         </li>
         <li>

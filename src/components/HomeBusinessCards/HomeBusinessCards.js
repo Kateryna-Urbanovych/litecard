@@ -11,31 +11,39 @@ export const HomeBusinessCards = () => {
     <section className={s.homeBusinessCards}>
       <ul className={s.homeBusinessList}>
         <li className='icon'>
-          <HomeIcon width='145' height='145' className={s.giftCardsIcon} />
+          <HomeIcon width='145' height='145' className={s.giftCardsIconHome} />
           HOME IMPROVEMENT
         </li>
         <li className='arrow'>
           <ArrowForwardIcon
-            width='115'
-            height='85'
+            width='110'
+            height='80'
             fill='#00AEEF'
             className={s.arrowForwardIcon}
           />
         </li>
         <li className='icon'>
-          <GiftCardsIcon width='105' height='105' className={s.giftCardsIcon} />
+          <GiftCardsIcon
+            width='105'
+            height='105'
+            className={s.giftCardsIconCard}
+          />
           GIFT <br /> CARDS
         </li>
         <li className='arrow'>
           <ArrowBack
-            width='115'
-            height='85'
+            width='110'
+            height='80'
             fill='#00AEEF'
             className={s.arrowBackIcon}
           />
         </li>
         <li className='icon'>
-          <BusinessIcon width='150' height='150' className={s.giftCardsIcon} />
+          <BusinessIcon
+            width='145'
+            height='145'
+            className={s.giftCardsIconBusiness}
+          />
           BUSINESS INVESTMENTS
         </li>
       </ul>

@@ -20,6 +20,10 @@
   z-index: 200;
 }
 
+.modal.isOpen {
+  margin-right: 0;
+}
+
 .textModal {
   margin-top: 10px;
   display: block;
