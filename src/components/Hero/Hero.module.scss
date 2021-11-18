@@ -35,11 +35,12 @@
   }
 }
 
-.signUp {
+.btnSignUp {
+  margin: 30px auto 0;
   cursor: pointer;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 30px;
+  outline: none;
+  border: none;
+  background-color: transparent;
 
   display: flex;
   justify-content: center;
@@ -48,8 +49,6 @@
   font-weight: 300;
   font-size: 16px;
 
-  width: 142px;
-  height: 46px;
   color: #ffffff;
   text-decoration: none;
   border: 2px solid #ffffff;
@@ -59,9 +58,17 @@
     border-color 250ms linear;
 }
 
-.signUp:hover,
-.signUp:focus {
+.btnSignUp:hover,
+.btnSignUp:focus {
   color: #ffffff;
   border-color: #000000;
   background-color: #000000;
+}
+
+.signUp {
+  padding: 10px 25px;
+  font-size: 16px;
+  font-weight: 300;
+  color: #ffffff;
+  text-decoration: none;
 }

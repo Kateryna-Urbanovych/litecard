@@ -11,9 +11,11 @@ export const Header = () => {
     if (document.body.classList.contains("modalOpen")) {
       document.querySelector("#modal").style.transform = "translateX(0%)";
       document.querySelector("#overlay").style.opacity = "1";
+      document.querySelector("#overlay").style.pointerEvents = "auto";
     } else {
       document.querySelector("#modal").style.transform = "translateX(100%)";
       document.querySelector("#overlay").style.opacity = "0";
+      document.querySelector("#overlay").style.pointerEvents = "none";
     }
   };
 

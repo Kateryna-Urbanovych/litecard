@@ -9,9 +9,11 @@ export const Hero = () => {
         Easily convert crypto <br /> to gift cards
       </h1>
       <HeroIcon className={s.heroIcon} />
-      <a href='#mailingListForm' className={s.signUp}>
-        Sign Up
-      </a>
+      <button className={s.btnSignUp}>
+        <a href='#mailingListForm' className={s.signUp}>
+          Sign Up
+        </a>
+      </button>
     </section>
   );
 };
