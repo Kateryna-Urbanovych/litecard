@@ -1,7 +1,7 @@
 .homeBusinessCards {
   margin-left: auto;
   margin-right: auto;
-  padding: 40px 40px;
+  padding: 20px 0;
 
   color: #00aeef;
   font-size: 20px;
@@ -9,12 +9,12 @@
   text-align: center;
 
   @media screen and (min-width: 750px) {
-    padding: 40px 80px;
+    padding: 40px 60px;
     font-size: 25px;
   }
 
   @media screen and (min-width: 1000px) {
-    padding: 40px 110px;
+    padding: 40px 80px;
     font-size: 35px;
   }
 }
@@ -25,26 +25,32 @@
   margin: 0;
 
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-  li {
-    width: calc(100% / 5);
+  @media screen and (min-width: 750px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    li {
+      width: calc(100% / 5);
+    }
   }
 }
 
 .arrowForwardIcon {
-  transform: rotate(90deg);
-  margin-left: -15px;
-  padding-bottom: 60px;
-  width: 70px;
-  height: 40px;
+  margin-top: 15px;
+  transform: rotate(180deg);
+  width: 90px;
+  height: 60px;
 
   @media screen and (min-width: 750px) {
+    transform: rotate(90deg);
     margin-left: -20px;
     padding-bottom: 70px;
-    width: 90px;
-    height: 60px;
   }
 
   @media screen and (min-width: 1000px) {
@@ -56,17 +62,14 @@
 }
 
 .arrowBackIcon {
-  transform: rotate(-90deg);
-  margin-right: -15px;
-  padding-bottom: 60px;
-  width: 70px;
-  height: 40px;
+  margin-top: 15px;
+  width: 90px;
+  height: 60px;
 
   @media screen and (min-width: 750px) {
+    transform: rotate(-90deg);
     margin-right: -20px;
     padding-bottom: 70px;
-    width: 90px;
-    height: 60px;
   }
 
   @media screen and (min-width: 1000px) {
@@ -81,8 +84,8 @@
   display: block;
   margin: 0 auto;
 
-  width: 50px;
-  height: 50px;
+  width: 145px;
+  height: 145px;
 
   @media screen and (min-width: 750px) {
     width: 100px;
@@ -99,8 +102,8 @@
   display: block;
   margin: 0 auto;
 
-  width: 40px;
-  height: 40px;
+  width: 105px;
+  height: 105px;
 
   @media screen and (min-width: 750px) {
     width: 65px;
@@ -117,8 +120,8 @@
   display: block;
   margin: 0 auto;
 
-  width: 50px;
-  height: 50px;
+  width: 145px;
+  height: 145x;
 
   @media screen and (min-width: 750px) {
     width: 100px;
@@ -130,21 +133,3 @@
     height: 145px;
   }
 }
-
-// .giftCardsIconCard {
-//   display: block;
-//   margin: 0 auto;
-
-//   width: 40px;
-//   height: 40px;
-
-//   @media screen and (min-width: 750px) {
-//     width: 65px;
-//     height: 65px;
-//   }
-
-//   @media screen and (min-width: 1000px) {
-//     width: 105px;
-//     height: 105px;
-//   }
-// }
