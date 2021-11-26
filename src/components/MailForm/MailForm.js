@@ -47,7 +47,10 @@ export const MailForm = () => {
       // для проверки
       console.log(`POST to URL_API with ${email}`);
 
-      const response = await axios.post("URL_API", email);
+      const response = await axios.post(
+        "http://185.233.36.116:4000/subscribe",
+        { email: email }
+      );
       toast.success("✔️ Thanks for subscription!");
       setError(false);
       return response; // если нужно что-то возвращать...
