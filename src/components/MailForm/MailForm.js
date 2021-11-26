@@ -1,9 +1,13 @@
 import React, { useState } from "react";
+import axios from "axios";
+import { toast } from "react-toastify";
 import s from "./MailForm.module.scss";
 
 export const MailForm = () => {
   const [value, setValue] = useState("");
   const [isSubmited, setIsSubmited] = useState(false);
+  const [error, setError] = useState(false);
+  const [isValidEmail, setIsValidEmail] = useState(false);
 
   const handleChange = (e) => {
     setValue(e.target.value);
@@ -12,21 +16,47 @@ export const MailForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    setIsSubmited(true);
-    setValue("");
+    if (isValidEmail) {
+      // POST запрос для отправки email
+      postEmail(value);
 
-    setTimeout(() => {
-      setIsSubmited(false);
-    }, 5000);
+      setIsSubmited(true);
+      setValue("");
+
+      setTimeout(() => {
+        setIsSubmited(false);
+      }, 5000);
+    }
   };
 
   const handleValidate = () => {
-    if (value === "" || !value.includes("@")) {
+    if (value === "" || !/.+@.+\..+/i.test(value)) {
+      setIsValidEmail(false);
+      toast.warning("❗❗ Enter a valid email");
       document.querySelector("#inputMailForm").style.borderColor = "#ff0000";
       document.querySelector("#inputMailForm").style.borderWidth = "2px";
     } else {
+      setIsValidEmail(true);
       document.querySelector("#inputMailForm").style.borderColor = "#000000";
       document.querySelector("#inputMailForm").style.borderWidth = "1px";
+    }
+  };
+
+  const postEmail = async (email) => {
+    try {
+      // для проверки
+      console.log(`POST to URL_API with ${email}`);
+
+      const response = await axios.post("URL_API", email);
+      toast.success("✔️ Thanks for subscription!");
+      setError(false);
+      return response; // если нужно что-то возвращать...
+    } catch (error) {
+      setError(true);
+      // пройтись по ошибкам которые возращает API
+      if (error) {
+        toast.error("❌ Sorry, something went wrong!");
+      }
     }
   };
 
@@ -49,7 +79,9 @@ export const MailForm = () => {
       <button type='submit' onClick={handleValidate}>
         Submit
       </button>
-      {isSubmited && <span className={s.submited}>Thanks for submitting!</span>}
+      {isSubmited && !error && (
+        <span className={s.submited}>Thanks for submitting!</span>
+      )}
     </form>
   );
 };
